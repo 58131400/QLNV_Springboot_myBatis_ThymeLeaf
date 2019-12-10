@@ -3,7 +3,6 @@ package ivs.thai.myBatis.Mapper;
 import ivs.thai.model.ThanhtichKiluat;
 import ivs.thai.model.ThanhtichKiluatExample;
 
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 

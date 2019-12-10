@@ -21,7 +21,7 @@
 
 	<div id="edit-main-content">
 		<form action="#" th:action="@{/edit}" th:object="${nhanvien}"
-			method="post">
+			method="post" enctype="multipart/form-data">
 			<h2>Thông tin nhân viên</h2>
 			<table>
 				<tr>
@@ -31,14 +31,14 @@
 					<td><input type="text" th:field="*{manv}"></td>
 				
 				
-					<td>Tên nhân viên:</th>
+					<td>Tên nhân viên:</td>
 					<td><input type="text" th:field="*{hoten}"></td>
 				</tr>
 				<tr>
-					<td>Phòng ban:</th>
+					<td>Phòng ban:</td>
 					<td><input type="text" th:field="*{mapb}"></td>
 				
-					<td>Giới tính:</th>
+					<td>Giới tính:</td>
 					<td><input type="radio" th:field="*{gioitinh}" th:value="true">Nam
 						<input type="radio" th:field="*{gioitinh}" th:value="false">
 						Nữ</td>
@@ -46,28 +46,31 @@
 
 
 				<tr>
-					<td>Số điện thoại:</th>
+					<td>Số điện thoại:</td>
 					<td><input type="text" th:field="*{dienthoai}"></td>
-					<td>Email:</th>
+					<td>Email:</td>
 					<td><input type="text" th:field="*{email}"></td>
 				</tr>
 				
 				
 				<tr>
-					<td>Cấp độ:</th>
+					<td>Cấp độ:</td>
 					<td><input type="text" th:field="*{capdo}"></td>
 				
-					<td>Ngày sinh:</th>
-					<td><input type="text" th:field="*{ngaysinh}"></td>
+					<td>Ngày sinh:</td>
+					<td><input type="date" th:field="*{ngaysinh}" id="date"></td>
 				</tr>
 				<tr>
-					<td>Lương:</th>
+					<td>Lương:</td>
 					<td><input type="text" th:field="*{luong}"></td>
+					<td>Hình ảnh: </td>
+							<td><input type="file" name="file"></td>
 				</tr>
 				<tr>
-					<td>Ghi chú:</th>
+					<td>Ghi chú:</td>
 					<td><textarea  th:field="*{ghichu}" rows="3"
 							cols="50"></textarea></td>
+							
 				</tr>
 				
 				<tr>
@@ -77,6 +80,9 @@
 			</table>
 
 		</form>
+		
 	</div>
+	
+	
 </body>
 </html>
