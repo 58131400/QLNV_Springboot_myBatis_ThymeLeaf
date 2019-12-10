@@ -1,0 +1,29 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+	<environments default="qlnv">
+		<environment id="qlnv">
+			<transactionManager type="JDBC" />
+
+			<dataSource type="POOLED">
+				<property name="driver" value="com.mysql.jdbc.Driver" />
+				<property name="url" value="jdbc:mysql://localhost/qlnv2" />
+				<property name="username" value="root" />
+				<property name="password" value="" />
+			</dataSource>
+
+		</environment>
+	</environments>
+
+	<mappers>
+		<mapper resource="ivs/thai/myBatis/Mapper/NhanvienMapper.xml" />
+		<mapper resource="ivs/thai/myBatis/Mapper/PhongBanMapper.xml" />
+		<mapper resource="ivs/thai/myBatis/Mapper/UserMapper.xml" />
+		<mapper resource="ivs/thai/myBatis/Mapper/UserRoleMapper.xml" />
+		<mapper resource="ivs/thai/myBatis/Mapper/AppRoleMapper.xml" />
+		<mapper resource="ivs/thai/myBatis/Mapper/ThanhtichKiluatMapper.xml" />
+	</mappers>
+
+</configuration>

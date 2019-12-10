@@ -1,0 +1,218 @@
+*{
+	padding:0;
+	margin:0;
+	font-family: sans-serif;
+}
+h1{
+	color: red;
+}
+a{
+	
+	text-decoration: none;
+}
+a:hover{
+	text-decoration: none;
+}
+ul{
+	margin:0;
+}
+li{
+	display:inline-block;
+	padding: 10px;
+	
+	cursor: pointer;
+	
+}
+
+
+article{
+	
+	padding: 10px;
+	border: 1px solid black;
+	
+}
+header{
+	position: relative;
+	padding-top: 100px;
+	padding-bottom:0px;
+	background-color: yellow;
+}
+.button{
+	background: none;
+	border: 1px solid #3498db;
+	padding: 10px 20px;
+	font-size: 20px;
+	cursor: pointer;
+	margin: 10px;
+}
+.btn1, .btn2{
+	color: #3498db;
+	
+}
+.btn3, .btn4{
+	color: #fff;
+}
+.btn1:hover, .btn2:hover{
+	color: #fff;
+}
+.btn3:hover, .btn4:hover{
+	color: #3498db;
+}
+.button::before{
+	content:"";
+	position: absolute;
+	left:0;
+	width: 100%;
+	height: 0%;
+	background: #3498db;
+	z-index:-1;
+	transition: 0.8s;
+}
+.btn1::before, .btn3::before{
+	top:0;
+	border-radius: 0 0 50% 50%;
+}
+.btn2::before, .btn4::before{
+	bottom:0;
+	border-radius: 50% 50% 0 0;
+}
+.btn3::before, .btn4::before{
+	height: 180%;
+}
+.btn1:hover::before, .btn2:hover::before{
+	height: 0%;
+}
+header .container{
+	padding:0;
+
+	}
+.search-box{
+	position:absolute;
+	top:50%;
+	right:15%;
+	transform: translate(-50%, -50%);
+	background: #2f3640;
+	height: 40px;
+	border-radius: 40px;
+	padding:10px;
+	transition:0.8s;
+}
+.search-btn{
+	color: #e84118;
+	float:right;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background: #2f3640;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	transition: 0.8s;
+}
+.search-txt{
+	border: none;
+	background: none;
+	outline: none;
+	float:left;
+	padding:0;
+	color:black;
+	font-size: 16px;
+	transition: 0.8s;
+	line-height: 40px;
+	width: 0px;
+}
+.error{
+	display: block;
+	color: red;
+	width: 100%;
+	font-style: italic;
+}
+.search-box:hover > .search-txt{
+	width: 240px;
+	padding: 0 6px;
+	background: #ecf0f1;
+}
+.search-box:hover > .search-btn{
+	background: white;
+}
+aside{
+	position: relative;
+	padding: 10px;
+	border: 1px solid black;
+}
+footer{
+	position:relative;
+	padding: 10px;
+	margin-top:10px;
+	border: 1px solid black;
+}
+.content{
+	position: relative;
+	margin-bottom: 10px;
+	min-height: 30vw;
+}
+.content .container{
+	text-align:center;
+	background: #000;
+	position: absolute;
+	top:50%;
+	left:50%;
+	transform: translate(-50%,-50%);
+	width: 100%;
+}
+span{
+	
+	text-transform: uppercase;
+	display: block;
+	
+}
+.text1{
+	font-size: 60px;
+	font-weight: 700;
+	letter-spacing: 8px;
+	margin-bottom: 20px;
+	position: relative;
+	background: black;
+	color:white;
+	animation: text 3s 1;
+}
+.text2{
+	font-size: 30px;
+	color: #6ab04c;
+}
+@keyframes text {
+	0%{
+	color: black;
+	margin-bottom: -40px;
+	}
+	30%{
+	letter-spacing: 25px;
+	margin-bottom: -40px;
+	}
+	85%{
+		letter-spacing: 8px;
+	margin-bottom: -40px;}
+}
+
+
+#form-insert{
+	texr-align: center;
+	position: relative;
+	margin-left: 30%;
+	
+	
+}
+.ui-datepicker-title span{
+	color: black;
+	display: inline-block;
+}
+table td{
+	padding: 5px;
+}
+#home-main-content{
+	min-height: 400px;
+}
+.container-fluid{
+	padding:0;
+}
+

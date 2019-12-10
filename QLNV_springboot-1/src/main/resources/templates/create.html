@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	th:replace="~{admin-layout/admin-layout::main-fragment(~{::title},
+												~{:: #create-static-resources},
+                                                ~{:: #create-header},
+                                                ~{:: #create-nav},
+                                                ~{:: #create-main-content},  
+                                                ~{:: #create-footer}
+                                               )}">
+
+<head>
+<meta charset="utf-8">
+<title>Create Employee</title>
+<th:block id="create-static-resources"></th:block>
+</head>
+<body>
+	<div id="create-header">Header of create</div>
+	<div id="create-nav">Create nav</div>
+	<div id="create-main-content">
+		<h2>Thêm Nhân Viên</h2>
+		<form action="#" th:action="@{/create}" method="post"
+			th:object="${nhanvien}" enctype="multipart/form-data">
+			<table>
+				<tr>
+					<td>Mã nhân viên:</td>
+					<td><input type="text" th:field="*{manv}"></td>
+				</tr>
+				<tr>
+					<td>Họ tên:</td>
+					<td><input type="text" th:field="*{hoten}"></td>
+				</tr>
+				<tr>
+					<td>Giới tính:</td>
+					<td><input type="radio" th:field="*{gioitinh}" th:value="true">Nam
+						<input type="radio" th:field="*{gioitinh}" th:value="false">
+						Nữ</td>
+				</tr>
+				<tr>
+					<td>ngày sinh:</td>
+					<td><input type="text" th:field="*{ngaysinh}" id="ngaysinh"></td>
+				</tr>
+				<tr>
+					<td>Hình ảnh:</td>
+					<td><input type="file" name="file"></td>
+				</tr>
+				<tr>
+					<td>Email:</td>
+					<td><input type="text" th:field="*{email}"></td>
+				</tr>
+				<tr>
+					<td>Cấp độ:</td>
+					<td><input type="text" th:field="*{capdo}"></td>
+				</tr>
+				<tr>
+					<td>Điện thoại:</td>
+					<td><input type="text" th:field="*{dienthoai}"></td>
+				</tr>
+				<tr>
+					<td>Lương:</td>
+					<td><input type="text" th:field="*{luong}"></td>
+				</tr>
+				<tr>
+					<td>Ghi chú:</td>
+					<td><input type="text" th:field="*{ghichu}"></td>
+				</tr>
+				<tr>
+					<td>Mã phòng ban:</td>
+					<td><input type="text" th:field="*{mapb}"></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><input type="submit" value="Thêm"></td>
+				</tr>
+
+			</table>
+		</form>
+	</div>
+	<div id="create-footer">Footer</div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+	<context id="context1">
+		<jdbcConnection
+			connectionURL="jdbc:mysql://localhost/qlnv2"
+			driverClass="com.mysql.jdbc.Driver" password="" userId="root" />
+		<javaModelGenerator targetPackage="ivs.thai.model"
+			targetProject="QLNV_springboot-1\src\main\java" />
+		<sqlMapGenerator
+			targetPackage="ivs.thai.myBatis.Mapper"
+			targetProject="QLNV_springboot-1\src\main\java" />
+		<javaClientGenerator
+			targetPackage="ivs.thai.myBatis.Mapper"
+			targetProject="QLNV_springboot-1\src\main\java" type="XMLMAPPER" />
+		<table tableName="nhanvien">
+			<columnOverride column="manv" property="manv" />
+		</table>
+		<table tableName="app_role">
+
+		</table>
+		<table tableName="user">
+
+		</table>
+		<table tableName="user_role">
+
+		</table>
+		<table tableName="phongban">
+		</table>
+		<table tableName="thanhtich_kiluat">
+		</table>
+	</context>
+</generatorConfiguration>
