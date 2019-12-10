@@ -56,7 +56,7 @@ public class ThanhTichController {
 	{
 		
 		int rowEffect = session.insert("ivs.thai.myBatis.Mapper.ThanhtichKiluatMapper.insert", thanhtich);
-		session.close();
+		
 		if(rowEffect == 1) 
 		{
 			SimpleMailMessage message = new SimpleMailMessage();
@@ -71,7 +71,7 @@ public class ThanhTichController {
 			}
 			else 
 			{
-				message.setSubject("Thưởng");
+				message.setSubject("Phạt");
 				
 				message.setText("Bạn đã bị trừ điểm kỉ luật");
 			}
