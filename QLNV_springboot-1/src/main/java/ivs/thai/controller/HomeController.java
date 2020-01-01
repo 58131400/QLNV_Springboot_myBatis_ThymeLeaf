@@ -175,7 +175,7 @@ public class HomeController {
 		return "redirect:/admin/home";
 	}
 
-	@RequestMapping(value = "/login")
+	@GetMapping("login")
 	public String login() {
 		return "login";
 	}
